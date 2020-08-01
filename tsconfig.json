@@ -2,9 +2,15 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "baseUrl": "./src",
+    "baseUrl": "src",
     "paths": {
-      "@images/*": ["images/*"]
+      "@components/*": ["components/*"],
+      "@graphql/*": ["graphql/*"],
+      "@images/*": ["images/*"],
+      "@pages/*": ["pages/*"],
+      "@styles/*": ["styles/*"],
+      "@type/*": ["types/*"],
+      "@utils/*": ["utils/*"],
     },
     "allowJs": true,
     "skipLibCheck": true,
