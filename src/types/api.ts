@@ -1,8 +1,14 @@
-export type TechIcon = {
+export type TechIconProps = {
   title: string
   icon: {
     url: string
   }
+}
+
+export type ModulesProps = {
+  title: string
+  subtitle: string
+  description: string
 }
 
 export type LogoProps = {
@@ -28,7 +34,33 @@ export type SectionAboutProjectProps = {
 
 export type SectionTechProps = {
   title: string
-  techIcons: TechIcon[]
+  techIcons: TechIconProps[]
+}
+
+export type SectionConceptsProps = {
+  title: string
+  concepts: Array<{ title: string }>
+}
+
+export type SectionModulesProps = {
+  title: string
+  modules: ModulesProps[]
+}
+
+export type SectionAgendaProps = {
+  title: string
+  description: string
+}
+
+export type PriceBoxProps = {
+  totalPrice: number
+  numberInstallments: number
+  priceInstallments: number
+  benefits: string
+  button: {
+    label: string
+    url: string
+  }
 }
 
 export type LandingPageProps = {
@@ -36,4 +68,8 @@ export type LandingPageProps = {
   header: HeaderProps
   sectionAboutProject: SectionAboutProjectProps
   sectionTech: SectionTechProps
+  sectionConcepts: SectionConceptsProps
+  sectionModules: SectionModulesProps
+  sectionAgenda: SectionAgendaProps
+  priceBox: PriceBoxProps
 }
