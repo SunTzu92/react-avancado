@@ -1,3 +1,13 @@
+export type Image = {
+  url: string
+  alternativeText: string
+}
+
+export type Button = {
+  label: string
+  url: string
+}
+
 export type TechIconProps = {
   title: string
   icon: {
@@ -11,13 +21,8 @@ export type ModulesProps = {
   description: string
 }
 
-export type LogoProps = {
-  url: string
-  alternativeText: string
-}
-
 export type AuthorsProps = {
-  photo: LogoProps
+  photo: Image
   name: string
   role: string
   socialLinks: Array<{
@@ -30,17 +35,14 @@ export type AuthorsProps = {
 export type HeaderProps = {
   title: string
   description: string
-  button: {
-    label: string
-    url: string
-  }
-  image: LogoProps
+  button: Button
+  image: Image
 }
 
 export type SectionAboutProjectProps = {
   title: string
   description: string
-  image: LogoProps
+  image: Image
 }
 
 export type SectionTechProps = {
@@ -68,10 +70,7 @@ export type PriceBoxProps = {
   numberInstallments: number
   priceInstallments: number
   benefits: string
-  button: {
-    label: string
-    url: string
-  }
+  button: Button
 }
 
 export type SectionAboutUsProps = {
@@ -79,8 +78,19 @@ export type SectionAboutUsProps = {
   authors: AuthorsProps[]
 }
 
+export type Review = {
+  name: string
+  text: string
+  photo: Image
+}
+
+export type SectionReviewsProps = {
+  title: string
+  reviews: Review[]
+}
+
 export type LandingPageProps = {
-  logo: LogoProps
+  logo: Image
   header: HeaderProps
   sectionAboutProject: SectionAboutProjectProps
   sectionTech: SectionTechProps
@@ -89,4 +99,5 @@ export type LandingPageProps = {
   sectionAgenda: SectionAgendaProps
   priceBox: PriceBoxProps
   sectionAboutUs: SectionAboutUsProps
+  sectionReviews: SectionReviewsProps
 }
