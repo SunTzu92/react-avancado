@@ -16,6 +16,17 @@ export type LogoProps = {
   alternativeText: string
 }
 
+export type AuthorsProps = {
+  photo: LogoProps
+  name: string
+  role: string
+  socialLinks: Array<{
+    title: string
+    url: string
+  }>
+  description: string
+}
+
 export type HeaderProps = {
   title: string
   description: string
@@ -63,6 +74,11 @@ export type PriceBoxProps = {
   }
 }
 
+export type SectionAboutUsProps = {
+  title: string
+  authors: AuthorsProps[]
+}
+
 export type LandingPageProps = {
   logo: LogoProps
   header: HeaderProps
@@ -72,4 +88,5 @@ export type LandingPageProps = {
   sectionModules: SectionModulesProps
   sectionAgenda: SectionAgendaProps
   priceBox: PriceBoxProps
+  sectionAboutUs: SectionAboutUsProps
 }
